@@ -1,0 +1,837 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- -------------- Meta and Title -------------- -->
+    <meta charset="utf-8">
+    <title>Fluerinjy - Add Order</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- -------------- Fonts -------------- -->
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- -------------- CSS - theme -------------- -->
+    <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+
+    <!-- -------------- CSS - allcp forms -------------- -->
+    <link rel="stylesheet" type="text/css" href="assets/allcp/forms/css/forms.css">
+	<link rel="stylesheet" type="text/css" href="assets/js/plugins/select2/css/core.css">
+	<link rel="stylesheet" type="text/css" href="assets/js/plugins/datepicker/css/bootstrap-datetimepicker.css">
+
+    <!-- -------------- Favicon -------------- -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+    <!-- -------------- IE8 HTML5 support  -------------- -->
+    <!--[if lt IE 9]>
+    <html dir="ltr" lang="en-US" class="no-js ie8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="forms-elements sb-l-o sb-l-m" data-spy="scroll" data-target="#nav-spy" data-offset="300" >
+
+<!-- -------------- Body Wrap  -------------- -->
+<div id="main">
+
+    <!-- -------------- Header  -------------- -->
+    <header class="navbar navbar-fixed-top bg-dark">
+        <div class="navbar-logo-wrapper">
+            <a class="navbar-logo-text" href="#">
+                <img src="assets/img/logo.png" />
+            </a>
+            <a class="icon-logo" href="#">
+                <img src="assets/img/icon.png" />
+            </a>
+        </div>
+         <span id="sidebar_left_toggle" class="ad ad-lines"></span>
+        <form class="navbar-form navbar-left search-form square" role="search">
+            <div class="input-group add-on">
+
+                <input type="text" class="form-control" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
+
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+
+            </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="hidden-xs">
+                <div class="navbar-btn btn-group">
+                    <a href="#" class="topbar-dropmenu-toggle btn" data-toggle="button">
+                        <span class="fa fa-magic fs20 text-info"></span>
+                    </a>
+                </div>
+            </li>
+            
+            <li class="dropdown dropdown-fuse">
+                <div class="navbar-btn btn-group">
+                    <button data-toggle="dropdown" class="btn btn-md dropdown-toggle">
+                        EN
+                    </button>
+                    <ul class="dropdown-menu pv5 animated animated-short fadeIn" role="menu">
+                        <li>
+                            <a href="javascript:void(0);"> Arabic </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown dropdown-fuse">
+                <a href="#" class="dropdown-toggle fw600" data-toggle="dropdown">
+                    <span class="hidden-xs"><name>Ahmed Saad</name> </span>
+                    <span class="fa fa-caret-down hidden-xs mr15"></span>
+                    <img src="assets/img/avatars/profile_avatar.jpg" alt="avatar" class="mw55">
+                </a>
+                <ul class="dropdown-menu list-group keep-dropdown w250" role="menu">
+                    <li class="list-group-item">
+                        <a href="#" class="animated animated-short fadeInUp">
+                            <span class="fa fa-cogs"></span> Profile  Settings </a>
+                    </li>
+                    <li class="dropdown-footer text-center">
+                        <a href="#" class="btn btn-primary btn-sm btn-bordered">
+                            <span class="fa fa-power-off pr5"></span> Logout </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- -------------- /Header  -------------- -->
+
+    <!-- -------------- Sidebar  -------------- -->
+    <aside id="sidebar_left" class="nano nano-light affix">
+
+        <!-- -------------- Sidebar Left Wrapper  -------------- -->
+        <div class="sidebar-left-content nano-content">
+
+
+            <!-- -------------- Sidebar Menu  -------------- -->
+            <ul class="nav sidebar-menu">
+                
+                <li class="active">
+                    <a href="index.html">
+                        <span class="fa fa-dashboard"></span>
+                        <span class="sidebar-title">Home</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="accordion-toggle">
+                        <span class="fa fa-th-list"></span>
+                        <span class="sidebar-title">Orders</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav">
+                        <li>
+                            <a href="add-order.html">
+                                <span class="glyphicon glyphicon-modal-window"></span> Add Order </a>
+                        </li>
+                        <li>
+                            <a href="orders.html">
+                                <span class="glyphicon glyphicon-book"></span> View Orders </a>
+                        </li>
+                        
+                        <li>
+                            <a href="delivery-orders.html">
+                                <span class="glyphicon glyphicon-book"></span> View Delivery Orders </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a class="accordion-toggle">
+                        <span class="fa fa-users"></span>
+                        <span class="sidebar-title">Customers</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav">
+                        <li>
+                            <a href="customers.html">
+                                <span class="glyphicon glyphicon-book"></span> View Customers </a>
+                        </li>
+                        <li>
+                            <a href="add-customer.html">
+                                <span class="glyphicon glyphicon-modal-window"></span> Add Customer </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a class="accordion-toggle">
+                        <span class="fa fa-money"></span>
+                        <span class="sidebar-title">Financial</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav">
+                        <li>
+                            <a href="payments.html">
+                                <span class="glyphicon glyphicon-book"></span> Payments </a>
+                        </li>
+                        <li>
+                            <a href="expenses.html">
+                                <span class="glyphicon glyphicon-modal-window"></span> Expenses </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a class="accordion-toggle">
+                        <span class="fa fa-line-chart"></span>
+                        <span class="sidebar-title">Reports</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav">
+                        <li>
+                            <a href="reports-sales.html">
+                                <span class="glyphicon glyphicon-book"></span> Sales Reports </a>
+                        </li>
+                        <li>
+                            <a href="reports-customers.html">
+                                <span class="glyphicon glyphicon-modal-window"></span> Customers Reports </a>
+                        </li>
+                        <li>
+                            <a href="reports-expenses.html">
+                                <span class="glyphicon glyphicon-modal-window"></span> Expenses Reports </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="users.html">
+                        <span class="fa fa-user-secret"></span>
+                        <span class="sidebar-title">Users</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="accordion-toggle">
+                        <span class="fa fa-cogs"></span>
+                        <span class="sidebar-title">System Setting</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="nav sub-nav">
+                        <li>
+                            <a href="setting-info.html">
+                                <span class="glyphicon glyphicon-book"></span> System Info </a>
+                        </li>
+                        <li>
+                            <a href="setting-extra.html">
+                                <span class="glyphicon glyphicon-modal-window"></span> Order Extras </a>
+                        </li>
+                        <li>
+                            <a href="setting-flowers.html">
+                                <span class="glyphicon glyphicon-modal-window"></span> Flowers </a>
+                        </li>
+                        <li>
+                            <a href="setting-order-types.html">
+                                <span class="glyphicon glyphicon-modal-window"></span> order Types </a>
+                        </li>
+                        <li>
+                            <a href="setting-order-statuses.html">
+                                <span class="glyphicon glyphicon-modal-window"></span> Order Statuses </a>
+                        </li>
+                        
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- -------------- /Sidebar Menu  -------------- -->
+
+        </div>
+        <!-- -------------- /Sidebar Left Wrapper  -------------- -->
+
+    </aside>
+
+    <!-- -------------- Main Wrapper -------------- -->
+    <section id="content_wrapper">
+
+        <!-- -------------- Topbar Menu Wrapper -------------- -->
+        <div id="topbar-dropmenu-wrapper">
+            <div class="topbar-menu row">
+                <div class="col-xs-4 col-sm-2">
+                    <a href="add-order.html" class="service-box bg-danger">
+                        <span class="fa fa-plus"></span>
+                        <span class="service-title">New order</span>
+                    </a>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <a href="add-order.html" class="service-box bg-success">
+                        <span class="fa fa-asterisk"></span>
+                        <span class="service-title">Quick Order</span>
+                    </a>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <a href="orders.html" class="service-box bg-primary">
+                        <span class="fa fa-list-alt"></span>
+                        <span class="service-title">View Orders</span>
+                    </a>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <a href="expenses.html" class="service-box bg-alert">
+                        <span class="fa fa-money"></span>
+                        <span class="service-title">Expenses</span>
+                    </a>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <a href="payments.html" class="service-box bg-system">
+                        <span class="fa fa-money"></span>
+                        <span class="service-title">Payments</span>
+                    </a>
+                </div>
+                <div class="col-xs-4 col-sm-2">
+                    <a href="customers.html" class="service-box bg-dark">
+                        <span class="fa fa-users"></span>
+                        <span class="service-title">Customers</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- -------------- /Topbar Menu Wrapper -------------- -->
+
+        <!-- -------------- Topbar -------------- -->
+        <header id="topbar" class="alt">
+            <div class="topbar-left">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-icon">
+                        <a href="">
+                            <span class="fa fa-plus"></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-active">
+                        <a href="">Add Order</a>
+                    </li>
+                    <li class="breadcrumb-link">
+                        <a href="">Home</a>
+                    </li>
+                    <li class="breadcrumb-link">
+                        <a href="">Orders</a>
+                    </li>
+                    <li class="breadcrumb-current-item">Add Order</li>
+                </ol>
+            </div>
+            
+        </header>
+        <!-- -------------- /Topbar -------------- -->
+
+        <!-- -------------- Content -------------- -->
+        <section id="content" class="table-layout animated fadeIn">
+
+            <!-- -------------- Column Left -------------- -->
+            <aside class="chute chute-left chute290 bg-primary" data-chute-height="match">
+
+                <div class="chute-affix" data-spy="affix" data-offset-top="200">
+
+                    <div id="nav-spy">
+                        <ul class="nav chute-nav" data-smoothscroll="-90">
+                            <li class="active">
+                                <a href="#spy1"> Customer Data</a>
+                            </li>
+                            <li>
+                                <a href="#spy2"> Flowers</a>
+                            </li>
+                            <li>
+                                <a href="#spy3"> Extras</a>
+                            </li>
+                            <li>
+                                <a href="#spy4"> Delivery</a>
+                            </li>
+                            <li>
+                                <a href="#spy5"> Message on Card</a>
+                            </li>
+                            <li>
+                                <a href="#spy6"> Notes</a>
+                            </li>
+                            <li>
+                                <a href="#spy7"> Payment Method</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </aside>
+            <!-- -------------- /Column Left -------------- -->
+
+            <!-- -------------- Column Center -------------- -->
+            <div class="chute chute-center">
+
+                <div class="mw1000 center-block">
+
+                    <!-- -------------- Spec Form -------------- -->
+                    <div class="allcp-form">
+                			<div class="panel mb35">
+                				<div class="panel-heading" >
+		                            <span class="panel-title">Add Order</span>
+		                        </div>
+		                        
+		                        <div class="panel-body br-t">
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="section row mb10">
+                                                <label class="field-label col-sm-3 ph10 text-center">Order Date:</label>
+
+                                                <div class="field-label col-sm-9 ph10">
+                                                    <b>2016-02-29 13:33:03</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="section row mb10">
+                                                <label class="field-label col-sm-3 ph10 text-center">Order Type:</label>
+
+                                                <div class="field-label col-sm-9 ph10">
+                                                    <b>In Shop</b>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="section row mb10">
+                                                <label class="field-label col-sm-3 ph10 text-center">Sales person:</label>
+
+                                                <div class="field-label col-sm-9 ph10">
+                                                    <b>Mohamed Ali</b>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+		                        
+                			</div>
+	                       <div class="panel mb35">
+		                        <div class="panel-heading" id="spy1">
+		                            <span class="panel-title">Customer Data</span>
+		                        </div>
+	                            <div class="panel-body br-t">
+	                               
+	                                    <!-- -------------- Icons -------------- -->
+	                                    <div class="row">
+	                                        <div class="col-md-8">
+                                                <div class="section row mb10">
+                                                    <label class="field-label col-sm-3 ph10 text-center">Customer Name:</label>
+
+                                                    <div class="field-label col-sm-9 ph10">
+                                                        <b>Mohamed Ali Sameh</b>
+                                                    </div>
+                                                </div>
+	                                        </div>
+	                                        
+	                                    </div>
+	
+	                                    <!-- -------------- Formats -------------- -->
+	                                    <div class="row">
+	                                        <div class="col-md-6">
+                                                <div class="section row mb10">
+                                                    <label class="field-label col-sm-3 ph10 text-center">Phone:</label>
+
+                                                    <div class="field-label col-sm-9 ph10">
+                                                        <b>01258936325</b>
+                                                    </div>
+                                                </div>
+	                                        </div>
+	                                        
+	                                         <div class="col-md-6">
+                                                 <div class="section row mb10">
+                                                     <label class="field-label col-sm-3 ph10 text-center">Mobile:</label>
+
+                                                     <div class="field-label col-sm-9 ph10">
+                                                         <b>01258936325</b>
+                                                     </div>
+                                                 </div>
+	                                        </div>
+	                                        
+	                                    </div>
+										<div class="row">
+	                                        <div class="col-md-6">
+                                                <div class="section row mb10">
+                                                    <label class="field-label col-sm-3 ph10 text-center">Email:</label>
+
+                                                    <div class="field-label col-sm-9 ph10">
+                                                        <b>mail@Company.com</b>
+                                                    </div>
+                                                </div>
+	                                        </div>
+	                                        <div class="col-md-6">
+                                                <div class="section row mb10">
+                                                    <label class="field-label col-sm-3 ph10 text-center">Client ID:</label>
+
+                                                    <div class="field-label col-sm-9 ph10">
+                                                        <b>#CL090</b>
+                                                    </div>
+                                                </div>
+	                                        </div>
+	                                    </div>
+										<div class="row">
+	                                        <div class="col-md-9">
+                                                <div class="section row mb10">
+                                                    <label class="field-label col-sm-2 ph10 text-center">Address:</label>
+
+                                                    <div class="field-label col-sm-9 ph10">
+                                                        <b>4 Othman Towers, Maadi Corniche, Cairo, Egypt</b>
+                                                    </div>
+                                                </div>
+	                                        </div>
+	                                    </div>
+										
+	                                
+	                            </div>
+	                        </div>
+                        
+	                        <div class="panel mb35">
+		                        <div class="panel-heading" id="spy2">
+		                            <span class="panel-title">Flowers</span>
+		                        </div>
+		                        <div class="panel-body br-t">
+		                            <div class="allcp-form theme-primary">
+		
+		                                <div class="section row mb10">
+		                                    <label class="field-label col-sm-3 ph10 text-center">Order Type:</label>
+		
+		                                    <div class="field-label col-sm-9 ph10">
+		                                        <b>Bouquet</b>
+		                                    </div>
+		                                </div>
+		
+		                                <div class="section row mb10">
+		                                    <label  class="field-label col-sm-3 ph10 text-center">Flower:</label>
+		
+		                                    <div class="field-label col-sm-9 ph10">
+				                                        <div class="row">
+
+									                            <table class="table table-striped table-bordered">
+									                                <thead>
+									                                <tr>
+									                                    <th class="text-center pr10">Type</th>
+									                                    <th class="text-center pr10">Color</th>
+									                                </tr>
+									                                </thead>
+									                                <tbody>
+									                                <tr>
+									                                    <td class="text-center pr10">Rose</td>
+									                                    <td class="text-center pr10">Red</td>
+									                                </tr>
+									                                <tr>
+									                                    <td class="text-center pr10">Rose</td>
+									                                    <td class="text-center pr10">Red</td>
+									                                </tr>
+									                                </tbody>
+									                            </table>
+						                                </div>
+						                                
+						                                
+						                                
+		                                    </div>
+		                                    
+		                                </div>
+		
+		                                <div class="section row mb10">
+		                                    <label class="field-label col-sm-3 ph10 text-center">Budget:</label>
+		
+		                                    <div class="field-label col-sm-9 ph10">
+		                                        <b>100 L.E.</b>
+		                                    </div>
+		                                </div>
+		
+		                            </div>
+		                        </div>
+		                    </div>
+		                    
+		                    <!-- Extras -->
+		                    <div class="panel mb35">
+		                        <div class="panel-heading" id="spy3">
+		                            <span class="panel-title">Extras</span>
+		                        </div>
+		                        <div class="panel-body br-t">
+
+		                                <div class="section row mb10">
+		                                	<div class="col-md-12 ph10 mt30 mb20">
+						                            <table class="table table-striped table-bordered">
+						                                <thead>
+						                                <tr>
+						                                    <th class="text-center pr10">Extra</th>
+						                                    <th class="text-center pr10">Type</th>
+						                                    <th class="text-center pr10">Amount</th>
+						                                    <th class="text-center pr10">Budget</th>
+						                                </tr>
+						                                </thead>
+						                                <tbody>
+						                                <tr>
+						                                    <td class="text-center pr10">Choclate</td>
+						                                    <td class="text-center pr10">Red Box</td>
+						                                    <td class="text-center pr10">1</td>
+						                                    <td class="text-center pr10">80</td>
+						                                </tr>
+						                                <tr>
+						                                    <td class="text-center pr10">Birds</td>
+						                                    <td class="text-center pr10">Golden Cage</td>
+						                                    <td class="text-center pr10">1</td>
+						                                    <td class="text-center pr10">300</td>
+						                                </tr>
+						                                </tbody>
+						                            </table>
+						                    </div>
+		                                </div>
+		                        </div>
+		                    </div>
+		                    
+		                    
+		                    <!-- Order Delivery -->
+		                    <div class="panel mb35">
+		                        <div class="panel-heading" id="spy4">
+		                            <span class="panel-title">Order Delivery</span>
+		                        </div>
+		                        <div class="panel-body br-t">
+		                            <div class="allcp-form theme-primary">
+		
+		                                <div class="section row mb10">
+		                                   <div class="tab-block mb25">
+
+											        <div id="tab15_1" class="tab-pane active">
+											           
+											           <div class="section row mb10">
+						                                    <label class="field-label col-sm-3 ph10 text-center">Name:</label>
+						
+						                                    <div class="field-label col-sm-9 ph10">
+						                                       Mohamed Saad Kamal
+						                                    </div>
+						                                </div>
+						                                <div class="section row mb10">
+						                                    <label class="field-label col-sm-3 ph10 text-center">Phone:</label>
+						
+						                                    <div class="field-label col-sm-9 ph10">
+						                                      01025784885
+						                                    </div>
+						                                </div>
+						                                
+						                                <div class="section row mb10">
+						                                    <label class="field-label col-sm-3 ph10 text-center">Address:</label>
+						
+						                                    <div class="field-label col-sm-9 ph10">
+						                                       <p>
+                                                                   4 Othman Towers, Maadi Corniche, Cairo, Egypt
+                                                               </p>
+						                                    </div>
+						                                </div>
+						                                
+						                                <div class="section row mb10">
+						                                    <label class="field-label col-sm-3 ph10 text-center">Notes:</label>
+						
+						                                    <div class="field-label col-sm-9 ph10">
+						                                       <P>
+                                                                   Lorem ipsum dolor sit amet, sodales et pretium convallis, gravida elementum. Et phasellus, vitae erat maecenas pellentesque mollis interdum, congue tempor, ac lorem leo sollicitudin sed semper accumsan.
+                                                               </P>
+						                                    </div>
+						                                </div>
+											           <div class="section row mb10">
+						                                    <label class="field-label col-sm-3 ph10 text-center">Budget:</label>
+						
+						                                    <div class="field-label col-sm-9 ph10">
+						                                        <b>100 L.E.</b>
+						                                    </div>
+						                                </div>
+											           
+											        </div>
+											</div>
+		                                </div>
+		
+		                            </div>
+		                        </div>
+		                    </div>
+		                    
+		                    <!-- Message on Card-->
+		                    <div class="panel mb35">
+		                        <div class="panel-heading" id="spy5">
+		                            <span class="panel-title">Message on Card</span>
+		                        </div>
+		                        <div class="panel-body br-t">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, sodales et pretium convallis, gravida elementum. Et phasellus, vitae erat maecenas pellentesque mollis interdum, congue tempor, ac lorem leo sollicitudin sed semper accumsan. Et a voluptatem etiam est sapien. Suspendisse vestibulum neque tortor
+                                    </p>
+		                        </div>
+		                    </div>
+		                    
+		                     <!-- Notes-->
+		                    <div class="panel mb35">
+		                        <div class="panel-heading" id="spy6">
+		                            <span class="panel-title">Notes</span>
+		                        </div>
+		                        <div class="panel-body br-t">
+		                            <p>
+                                        Lorem ipsum dolor sit amet, sodales et pretium convallis, gravida elementum. Et phasellus, vitae erat maecenas pellentesque mollis interdum, congue tempor, ac lorem leo sollicitudin sed semper accumsan. Et a voluptatem etiam est sapien. Suspendisse vestibulum neque tortor
+                                    </p>
+		                        </div>
+		                    </div>
+		                    
+		                    <!-- Payment Method-->
+		                    <div class="panel mb35">
+		                        <div class="panel-heading" id="spy7">
+		                            <span class="panel-title">Payment Method</span>
+		                        </div>
+		                        <div class="panel-body br-t">
+		                            <div class="allcp-form theme-primary">
+		
+		                                	<div class="section row mb10">
+			                                    <label class="field-label col-sm-3 ph10 text-center">Total budget:</label>
+			
+			                                    <div class="field-label col-sm-9 ph10">
+			                                       <b>500 L.E.</b>
+			                                    </div>
+			                                </div>
+			                                
+			                                <div class="section row mb10">
+			                                    <label class="field-label col-sm-3 ph10 text-center">Payment:</label>
+			
+			                                    <div class="col-sm-9 ph10">
+
+							                                <div class="col-md-12 ">
+									                            <table class="table table-striped table-bordered">
+									                                <thead>
+									                                <tr>
+									                                    <th class="text-center pr10">Amount Paid</th>
+									                                    <th class="text-center pr10">Method</th>
+									                                </tr>
+									                                </thead>
+									                                <tbody>
+									                                <tr>
+									                                    <td class="text-center pr10">100</td>
+									                                    <td class="text-center pr10">Cash</td>
+									                                </tr>
+									                                <tr>
+									                                    <td class="text-center pr10">300</td>
+									                                    <td class="text-center pr10">Visa</td>
+									                                </tr>
+									                                </tbody>
+									                            </table>
+									                    </div>
+			                                    </div>
+			                                    
+			                                </div>
+		                                    <div class="section row mb10">
+			                                    <label class="field-label col-sm-3 ph10 text-center">The Remaining:</label>
+			
+			                                    <div class="field-label col-sm-9 ph10">
+			                                       <b>100 L.E.</b>
+			                                    </div>
+			                                </div>
+		
+		                            </div>
+		                        </div>
+		                    </div>
+
+                        <div class="panel mb35">
+                            <div class="panel-heading">
+                                <span class="panel-title">Order Edits Timelinw</span>
+                            </div>
+                            <div class="panel-body br-t">
+
+                                <div class="section row mb10">
+                                    <div class="col-md-12 ph10 mt30 mb20">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
+                                            <tr>
+                                                <th class="text-center pr10">Version</th>
+                                                <th class="text-center pr10">Update Time</th>
+                                                <th class="text-center pr10">Show</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="text-center pr10">1</td>
+                                                <td class="text-center pr10">2016-03-20 07:01:16</td>
+                                                <td class="text-center pr10"><a href="#" class="btn btn-info br2 btn-xs"> Show</a></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-body mt5">
+                                <div class="col-sm-4 ">
+                                    <a href="" class="btn btn-lg btn-block btn-success">Print Order</a>
+                                </div>
+                                <div class="col-sm-4">
+                                    <a href="" class="btn btn-lg btn-block btn-primary">Print Delivery Order</a>
+                                </div>
+                                <div class="col-sm-4 ">
+                                    <a href="" class="btn btn-lg btn-block btn-success">Edit Order</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- -------------- /Column Center -------------- -->
+
+        </section>
+        <!-- -------------- /Content -------------- -->
+
+    </section>
+
+</div>
+<!-- -------------- /Body Wrap  -------------- -->
+
+<style>
+    body {
+        min-height: 2300px;
+    }
+
+    .content-header b,
+    .allcp-form .panel.heading-border:before,
+    .allcp-form .panel .heading-border:before {
+        transition: all 0.7s ease;
+    }
+
+    @media (max-width: 800px) {
+        .allcp-form .panel-body {
+            padding: 18px 12px;
+        }
+
+        .option-group .option {
+            display: block;
+        }
+
+        .option-group .option + .option {
+            margin-top: 8px;
+        }
+    }
+</style>
+
+
+<!-- -------------- Scripts -------------- -->
+
+<!-- -------------- jQuery -------------- -->
+<script src="assets/js/jquery/jquery-1.11.3.min.js"></script>
+<script src="assets/js/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+<!-- -------------- HighCharts Plugin -------------- -->
+<script src="assets/js/plugins/highcharts/highcharts.js"></script>
+
+<!-- -------------- Theme Scripts -------------- -->
+<script src="assets/js/utility/utility.js"></script>
+<script src="assets/js/demo/demo.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/demo/widgets_sidebar.js"></script>
+<script src="assets/js/pages/allcp_forms-elements.js"></script>
+
+<!-- -------------- /Scripts -------------- -->
+<script src="assets/js/plugins/globalize/globalize.min.js"></script>
+<script src="assets/js/plugins/moment/moment.min.js"></script>
+<script src="assets/js/plugins/datepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="assets/js/plugins/maxlength/bootstrap-maxlength.min.js"></script>
+<script src="assets/js/plugins/select2/select2.min.js"></script>
+<script src="assets/js/add-order.js"></script>
+
+</body>
+
+</html>
